@@ -65,6 +65,20 @@ local CreditsTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+local EventTab = Window:MakeTab({
+	Name = "Halloween",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 CreditsTab:AddLabel("Credits ∢~∢")
 CreditsTab:AddParagraph("Contributors:","Thank you for all of the scripters and g's who made this gui.")
 CreditsTab:AddParagraph("Once again,","DM me for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
@@ -169,8 +183,7 @@ GameTab:AddButton({
 GameTab:AddButton({
 	Name = "MM2",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))() 
-    end   
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/kortigadulfo/pepsihub/main/mm2.lua"))()    end   
 })
 
 -- HUBS HUBS --
@@ -197,7 +210,14 @@ HubTab:AddButton({
 -- CREDITS --
 
 
+--------------- event ---------------------
 
+EventTab:AddButton({
+	Name = "MM2 Candy Farm",
+	Callback = function()
+		loadstring(game:HttpGet"https://pastebin.com/raw/dB3kQmYm")()
+	end
+})
 
 
 -- KEYBIND --
@@ -220,6 +240,11 @@ Callback = <function> - The function of the bind.
 
 
 
+
+
+
+
+---------------------
 Tab:AddToggle({
     Name = "Toggle",
     Default = true,
@@ -240,3 +265,7 @@ Tab:AddToggle({
 		print(Value)
 	end    
 })
+
+
+
+-----------------------------------------
