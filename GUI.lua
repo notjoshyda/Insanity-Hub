@@ -24,7 +24,7 @@ MainTab:AddParagraph("","DM me for a script removal if thats what you wish for, 
 MainTab:AddButton({
 	Name = "Random button!",
 	Callback = function()
-      		print("fuck skibdi toilet i hate all gen alpha monkeys lol lololololol noob you not skibidi rizz toilet")
+      		print("L skibdi toilet i hate all gen alpha monkeys lol lololololol noob you not skibidi rizz toilet")
   	end    
 })
 
@@ -70,10 +70,12 @@ CreditsTab:AddParagraph("Contributors:","Thank you for all of the scripters and 
 CreditsTab:AddParagraph("Once again,","DM me for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
 
 CreditsTab:AddLabel("---------------------------")
-CreditsTab:AddParagraph("Thank you:,",
-"shadow62",
-"Icantlogincuzof2step",
-"fearhypno")
+CreditsTab:AddParagraph("Thank you:","")
+CreditsTab:AddParagraph("Shadow 62 - Catbypasser + Anti Logger","Contributions")
+CreditsTab:AddParagraph("BL4CKHOLE","Contributions")
+CreditsTab:AddParagraph("FearHyno","Contributions")
+CreditsTab:AddParagraph("Unknown GUI Makers","GUI's + Code")
+CreditsTab:AddParagraph("","Contributions")
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -135,20 +137,33 @@ Callback = <function> - The function of the toggle.
 
 
 GameTab:AddButton({
-	Name = "Inf yeild",
+	Name = "Infinite Yield",
 	Callback = function()
-        MainSection:NewButton("Inf Yeld", "Example: ;fly ", function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-         end)
-          end    
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end
 })
 
 GameTab:AddButton({
 	Name = "Prison Life",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main'))()
     end    
 })
+
+GameTab:AddButton({
+	Name = "Michaels Zombies",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Kinokq/Infrunami-Hub/refs/heads/main/Main'))()
+    end    
+})
+
+GameTab:AddButton({
+	Name = "Dandys World",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/Dandy's%20World"))()
+    end   
+})
+
 
 
 -- HUBS HUBS --
