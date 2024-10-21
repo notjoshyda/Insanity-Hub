@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = true, IntroText = "Insanity Hub | Version: 1.2.0", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -79,13 +79,8 @@ CreditsTab:AddParagraph("","Contributions")
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-local PremiumTab = Window:MakeTab({
-	Name = "Premium",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = true
-})
-
+-- Premium Deleted --
+-- Idea: Premium Key  external access to gui / donation --
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 OrionLib:MakeNotification({
@@ -164,7 +159,19 @@ GameTab:AddButton({
     end   
 })
 
+GameTab:AddButton({
+	Name = "Bedwars",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))() 
+    end   
+})
 
+GameTab:AddButton({
+	Name = "MM2",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))() 
+    end   
+})
 
 -- HUBS HUBS --
 
@@ -172,6 +179,13 @@ HubTab:AddButton({
 	Name = "Cat Bypasser!","discord.gg/catbypasser",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/shadow62x/catbypass/main/upfix"))()
+    end    
+})
+
+HubTab:AddButton({
+	Name = "Universal FE / Animation Hub",
+	Callback = function()
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/WinterDinder/oldfehub/main/boronide%20level%20obfuscation%20lol")()
     end    
 })
 
