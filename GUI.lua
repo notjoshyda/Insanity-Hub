@@ -1,5 +1,6 @@
+setclipboard("https://discord.gg/fZDNu9uQCz")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = true, IntroText = "Insanity Hub | Version: 1.2.0", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = true, IntroText = "Insanity Hub | Version: 1.2.1", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -20,11 +21,17 @@ local MainTab = Window:MakeTab({
 })
 MainTab:AddLabel("~ * Insanity Hub * ~")
 MainTab:AddParagraph("Information:","Thank you for choosing insanity hub, i love all of you using this and you have my respect, feel free to dm me suggestions and scripts. All of you are W's. ")
-MainTab:AddParagraph("","DM me for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
+MainTab:AddParagraph("Script by notjoshyda","DM me for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
 MainTab:AddButton({
 	Name = "Random button!",
 	Callback = function()
       		print("L skibdi toilet i hate all gen alpha monkeys lol lololololol noob you not skibidi rizz toilet")
+			  OrionLib:MakeNotification({
+				Name = "Check the F9 logs ;o",
+				Content = "",
+				Image = "rbxassetid://4483345998",
+				Time = 1
+			})
   	end    
 })
 
@@ -35,7 +42,19 @@ MainTab:AddButton({
             Name = "Please join the discord:",
             Content = "https://discord.gg/fZDNu9uQCz",
             Image = "rbxassetid://4483345998",
-            Time = 60
+            Time = 30
+        })
+  	end    
+})
+
+MainTab:AddButton({
+    Name = "Latest Update",
+	Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Latest Update Is 1.20.1",
+            Content = "Please join our discord https://discord.gg/fZDNu9uQCz. Updated as of 22/10/24.",
+            Image = "rbxassetid://4483345998",
+            Time = 20
         })
   	end    
 })
@@ -81,7 +100,7 @@ local EventTab = Window:MakeTab({
 
 CreditsTab:AddLabel("Credits ∢~∢")
 CreditsTab:AddParagraph("Contributors:","Thank you for all of the scripters and g's who made this gui.")
-CreditsTab:AddParagraph("Once again,","DM me for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
+CreditsTab:AddParagraph("Once again,","DM me (notjoshyda on dc) for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
 
 CreditsTab:AddLabel("---------------------------")
 CreditsTab:AddParagraph("Thank you:","")
@@ -186,6 +205,44 @@ GameTab:AddButton({
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/kortigadulfo/pepsihub/main/mm2.lua"))()    end   
 })
 
+
+GameTab:AddButton({
+	Name = "Rivals",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ByNami/RIVALS/main/RIVALS.lua"))()
+    end   
+})
+
+
+GameTab:AddButton({
+	Name = "Arsenal",
+	Callback = function()
+		OrionLib:MakeNotification({
+			Name = "Action Failed!",
+			Content = "I cannot find a script for this, please dm me if you find one!",
+			Image = "rbxassetid://4483345998",
+			Time = 10
+		})		
+    end   
+})
+
+GameTab:AddButton({
+	Name = "Blox Fruits",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/PerdHub/Blosfruitscript/main/PerdLoader"))()
+    end   
+})
+
+
+GameTab:AddButton({
+	Name = "Da Hood",
+	Callback = function()
+		_G.Toggles = "V"
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/NighterEpic/Faded-Grid/main/YesEpic'))()
+    end   
+})
+
+
 -- HUBS HUBS --
 
 HubTab:AddButton({
@@ -201,9 +258,6 @@ HubTab:AddButton({
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/WinterDinder/oldfehub/main/boronide%20level%20obfuscation%20lol")()
     end    
 })
-
-
--- Premium --
 
 
 
