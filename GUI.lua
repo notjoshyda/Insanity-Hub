@@ -1,4 +1,3 @@
-setclipboard("https://discord.gg/fZDNu9uQCz")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = true, IntroText = "Insanity Hub | Version: 1.2.1", SaveConfig = true, ConfigFolder = "OrionTest"})
 
