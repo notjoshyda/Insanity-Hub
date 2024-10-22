@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = true, IntroText = "Insanity Hub | Version: 1.2.1", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = true, IntroText = "Insanity Hub | Version: 1.2.2", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -50,7 +50,7 @@ MainTab:AddButton({
     Name = "Latest Update",
 	Callback = function()
         OrionLib:MakeNotification({
-            Name = "Latest Update Is 1.20.1",
+            Name = "Latest Update Is 1.2.2",
             Content = "Please join our discord https://discord.gg/fZDNu9uQCz. Updated as of 22/10/24.",
             Image = "rbxassetid://4483345998",
             Time = 20
@@ -201,7 +201,8 @@ GameTab:AddButton({
 GameTab:AddButton({
 	Name = "MM2",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/kortigadulfo/pepsihub/main/mm2.lua"))()    end   
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/kortigadulfo/pepsihub/main/mm2.lua"))()    
+	end   
 })
 
 
@@ -217,7 +218,7 @@ GameTab:AddButton({
 	Name = "Arsenal",
 	Callback = function()
 		OrionLib:MakeNotification({
-			Name = "Action Failed!",
+			Name = "Action Error",
 			Content = "I cannot find a script for this, please dm me if you find one!",
 			Image = "rbxassetid://4483345998",
 			Time = 10
@@ -239,6 +240,28 @@ GameTab:AddButton({
 		_G.Toggles = "V"
         loadstring(game:HttpGet('https://raw.githubusercontent.com/NighterEpic/Faded-Grid/main/YesEpic'))()
     end   
+})
+
+
+GameTab:AddButton({
+	Name = "Piggy",
+	Callback = function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/Piggy-open-source-15390"))()    
+	end   
+})
+
+GameTab:AddButton({
+	Name = "Horrors RNG",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/R1nn1/MainMenu1/main/MainMenuV1.2"))()
+	end
+})
+
+GameTab:AddButton({
+	Name = "Epic Minigames",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI"))()
+	end
 })
 
 
