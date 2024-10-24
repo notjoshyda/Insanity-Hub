@@ -1,5 +1,13 @@
+-- loadstring(game:HttpGet('https://raw.githubusercontent.com/notjoshyda/Insanity-Hub/refs/heads/main/GUI.lua'))()
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = true, IntroText = "Insanity Hub | Version: 1.2.2", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = false, IntroText = "Insanity Hub | Version: 1.2.3", SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "New Payed Fetures Soon",
+	Content = "Im going to try and attempt to get a premium feture for the cheap price of 100 robux soon 🙏",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
 
 --[[
 Name = <string> - The name of the UI.
@@ -50,8 +58,8 @@ MainTab:AddButton({
     Name = "Latest Update",
 	Callback = function()
         OrionLib:MakeNotification({
-            Name = "Latest Update Is 1.2.2",
-            Content = "Please join our discord https://discord.gg/fZDNu9uQCz. Updated as of 22/10/24.",
+            Name = "Latest Update Is 1.2.3",
+            Content = "Please join our discord https://discord.gg/fZDNu9uQCz. Updated as of 24/10/24.",
             Image = "rbxassetid://4483345998",
             Time = 20
         })
@@ -99,7 +107,7 @@ local EventTab = Window:MakeTab({
 
 CreditsTab:AddLabel("Credits ∢~∢")
 CreditsTab:AddParagraph("Contributors:","Thank you for all of the scripters and g's who made this gui.")
-CreditsTab:AddParagraph("Once again,","DM me (notjoshyda on dc) for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
+CreditsTab:AddParagraph("Once again,","DM me (notjoshyda on discord) for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
 
 CreditsTab:AddLabel("---------------------------")
 CreditsTab:AddParagraph("Thank you:","")
@@ -158,7 +166,7 @@ Callback = <function> - The function of the toggle.
 
 -- MAIN SECTION --
 
--- N/A --
+-- N/A
 
 -- GAMES --
 
@@ -264,6 +272,13 @@ GameTab:AddButton({
 	end
 })
 
+GameTab:AddButton({
+	Name = "Fisch - Key: Fisc8237NewFish!!Good",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/fish/refs/heads/main/NewFisch"))()
+	end
+})
+
 
 -- HUBS HUBS --
 
@@ -281,7 +296,12 @@ HubTab:AddButton({
     end    
 })
 
-
+HubTab:AddButton({
+	Name = "Avtor Hub (Mobile Only)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Avtor1zaTion/Avtor/main/AvtorHub'))()
+    end    
+})
 
 -- CREDITS --
 
@@ -345,3 +365,4 @@ Tab:AddToggle({
 
 
 -----------------------------------------
+OrionLib:Destroy()
