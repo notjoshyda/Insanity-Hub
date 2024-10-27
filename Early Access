@@ -92,8 +92,6 @@ local P2W = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Creamium:AddParagraph("","ADDING THIS RN")
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 local CreditsTab = Window:MakeTab({
@@ -109,8 +107,6 @@ local Creamium = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = true
 })
-
-Creamium:AddParagraph("ITS HERE","DM ME YOUR ROBLOX USER FOR PURCHASE")
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
