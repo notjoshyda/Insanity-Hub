@@ -3,8 +3,8 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = false, IntroText = "Insanity Hub | Version: 1.3.0", SaveConfig = true, ConfigFolder = "OrionTest"})
 OrionLib:MakeNotification({
-	Name = "New Payed Fetures Soon",
-	Content = "Im going to try and attempt to get a premium feture for the cheap price of 100 robux soon 🙏",
+	Name = "New Paid Fetures Soon",
+	Content = "Creamium is ready!!!! (Just gotta figure out how it works o.o)",
 	Image = "rbxassetid://4483345998",
 	Time = 10
 })
@@ -29,6 +29,7 @@ local MainTab = Window:MakeTab({
 MainTab:AddLabel("~ * Insanity Hub * ~")
 MainTab:AddParagraph("Information:","Thank you for choosing insanity hub, i love all of you using this and you have my respect, feel free to dm me suggestions and scripts. All of you are W's. ")
 MainTab:AddParagraph("Script by notjoshyda","DM me for a script removal if thats what you wish for, however i will be crediting all in the credits section!!! ")
+MainTab:AddParagraph("Web Support","This hub supports web and mobile!! However some of the guis on this may not support mobile as this is intended to fully support web however i did add a few mobile fetures!!")
 MainTab:AddButton({
 	Name = "Random button!",
 	Callback = function()
@@ -85,6 +86,16 @@ local GameTab = Window:MakeTab({
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+local P2W = Window:MakeTab({
+	Name = "Paid Hubs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Creamium:AddParagraph("","ADDING THIS RN")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 local CreditsTab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -98,6 +109,8 @@ local Creamium = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = true
 })
+
+Creamium:AddParagraph("ITS HERE","DM ME YOUR ROBLOX USER FOR PURCHASE")
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -277,8 +290,57 @@ GameTab:AddButton({
 	end
 })
 
+GameTab:AddButton({
+	Name = "Strongest Battlegrounds",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ATrainz/main/main/Phantasm-Loader.lua"))()
+	end
+})
+
+GameTab:AddButton({
+	Name = "Funky Friday",
+	Callback = function()
+		loadstring(game:HttpGet('https://pastebin.com/73jvhLnu'))()
+	end
+})
+
+GameTab:AddButton({
+	Name = "Blade Ball",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/LOLking123456/Blade/main/Ball'))()
+	end
+})
+
+GameTab:AddButton({
+	Name = "Death Ball",
+	Callback = function()
+		loadstring(game:HttpGet("https://cdn.luarmor.net/verified/godhubloader.lua"))()
+	end
+})
+
+GameTab:AddButton({
+	Name = "Combat Warriors - Use at own risk",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastefy.app/50B4Z9UK/raw"))()
+	end
+})
+
 
 -- HUBS HUBS --
+
+HubTab:AddButton({
+	Name = "Infinite Yeild",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end    
+})
+
+HubTab:AddButton({
+	Name = "Sirius (OP)",
+	Callback = function()
+		loadstring(game:HttpGet('https://sirius.menu/sirius'))()
+    end    
+})
 
 HubTab:AddButton({
 	Name = "Cat Bypasser!","discord.gg/catbypasser",
@@ -301,7 +363,10 @@ HubTab:AddButton({
     end    
 })
 
--- CREDITS --
+-- p2w --
+
+
+
 
 
 --[[ Premium ]]
@@ -335,8 +400,56 @@ local Section = Creamium:AddSection({
 	 game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 	end    
    })
-   
 
+Creamium:AddButton({
+	Name = "Troll IP Grabber",
+	Callback = function()
+		loadstring(game:HttpGet("https://zxfolix.github.io/trollgrabber.lua"))()
+    end    
+})
+
+Creamium:AddButton({
+	Name = "Click To TP (Hold CTRL)",
+	Callback = function()
+		loadstring(game:HttpGet("https://zxfolix.github.io/clicktp.lua"))()
+    end    
+})
+
+Creamium:AddButton({
+	Name = "Free Camera",
+	Callback = function()
+		loadstring(game:HttpGet('https://zxfolix.github.io/freecamV2.txt'))()
+    end    
+})
+
+
+Creamium:AddButton({
+	Name = "Free Camera",
+	Callback = function()
+		loadstring(game:HttpGet('https://zxfolix.github.io/freecamV2.txt'))()
+    end    
+})
+
+Creamium:AddButton({
+	Name = "Anti AFK V2",
+	Callback = function()
+		loadstring(game:GetObjects("rbxassetid://15050819751")[1].Source)()
+    end    
+})
+
+Creamium:AddButton({
+	Name = "FOV Changer",
+	Callback = function()
+		loadstring(game:GetObjects("rbxassetid://15046298025")[1].Source)()
+    end    
+})
+
+Creamium:AddButton({
+	Name = "Fake Ban",
+	Callback = function()
+		loadstring(game:HttpGet("https://zxfolix.github.io/fakeban.lua"))()
+    end    
+})
 
 -- KEYBIND --
 
