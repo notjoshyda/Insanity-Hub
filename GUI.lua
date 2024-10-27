@@ -315,6 +315,13 @@ EventTab:AddButton({
 	end
 })
 
+EventTab:AddButton({
+	Name = "The Strongest Battlegrounds KJ (NON FE)",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/7JdC3wL1"))() 
+	end
+})
+
 
 -- KEYBIND --
 
