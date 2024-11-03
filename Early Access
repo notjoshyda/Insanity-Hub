@@ -105,7 +105,7 @@ local CreditsTab = Window:MakeTab({
 local Creamium = Window:MakeTab({
 	Name = "Creamium",
 	Icon = "rbxassetid://4483345998",
-	PremiumOnly = true
+	PremiumOnly = false
 })
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -375,6 +375,13 @@ HubTab:AddButton({
 })
 
 
+HubTab:AddButton({
+	Name = "Infinite Fun ;3",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+    end    
+})
+
 -- p2w --
 
 
@@ -468,6 +475,95 @@ Creamium:AddButton({
     end    
 })
 
+
+Creamium:AddButton({
+	Name = "ESP - Made By Me",
+	Callback = function()
+		local espEnabled = false
+
+local function toggleESP()
+espEnabled = not espEnabled
+if espEnabled then
+print("ESP Enabled")
+for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+if player ~= game.Players.LocalPlayer then
+local highlight = Instance.new("Highlight")
+highlight.Parent = player.Character
+end
+end
+else
+print("ESP Disabled")
+for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+if player ~= game.Players.LocalPlayer then
+for _, item in pairs(player.Character:GetChildren()) do
+if item:IsA("Highlight") then
+item:Destroy()
+end
+end
+end
+end
+end
+end
+
+-- Create a simple GUI
+local ScreenGui = Instance.new("ScreenGui")
+local ToggleButton = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+ToggleButton.Parent = ScreenGui
+
+ToggleButton.Position = UDim2.new(0.5, -50, 0.5, -25)
+ToggleButton.Size = UDim2.new(0, 100, 0, 50)
+ToggleButton.Text = "Toggle ESP"
+ToggleButton.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+ToggleButton.TextColor3 = Color3.new(1, 1, 1)
+ToggleButton.Font = Enum.Font.SourceSans
+ToggleButton.TextSize = 18
+ToggleButton.BorderSizePixel = 0
+
+-- Intro animation
+ToggleButton.Position = UDim2.new(0.5, -50, 1.1, 0) -- initial position off-screen
+ToggleButton:TweenPosition(UDim2.new(0.5, -50, 0.5, -25), "Out", "Bounce", 1) -- animate to final position
+
+ToggleButton.MouseButton1Click:Connect(toggleESP)
+
+-- Enable dragging
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+local delta = input.Position - dragStart
+ToggleButton.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+ToggleButton.InputBegan:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1 then
+dragging = true
+dragStart = input.Position
+startPos = ToggleButton.Position
+input.Changed:Connect(function()
+if input.UserInputState == Enum.UserInputState.End then
+dragging = false
+end
+end)
+end
+end)
+ToggleButton.InputChanged:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseMovement then
+dragInput = input
+end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+if dragging and input == dragInput then
+update(input)
+end
+end)
+    end    
+})
+
 -- KEYBIND --
 
 Tab:AddBind({
@@ -487,6 +583,10 @@ Callback = <function> - The function of the bind.
 ]]
 
 
+
+
+print(OrionLib.Flags["toggle"].Value) -- prints the value of the toggle.
+OrionLib:Init()
 
 
 
