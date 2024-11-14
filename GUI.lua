@@ -1,4 +1,4 @@
--- loadstring(game:HttpGet('https://raw.githubusercontent.com/notjoshyda/Insanity-Hub/refs/heads/main/GUI.lua'))()
+-- loadstring(game:HttpGet('https://raw.githubusercontent.com/notjoshyda/Insanity-Hub/refs/heads/main/Early%20Access'))()
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Insanity Hub", HidePremium = false, IntroText = "Insanity Hub | Version: 1.3.3", SaveConfig = true, ConfigFolder = "OrionTest"})
@@ -43,30 +43,25 @@ MainTab:AddButton({
   	end    
 })
 
-MainTab:AddButton({
-    Name = "Discord",
-	Callback = function()
-        OrionLib:MakeNotification({
-            Name = "Please join the discord:",
-            Content = "https://discord.gg/fZDNu9uQCz",
-            Image = "rbxassetid://4483345998",
-            Time = 30
-        })
-  	end    
-})
 
 MainTab:AddButton({
     Name = "Latest Update",
 	Callback = function()
         OrionLib:MakeNotification({
-            Name = "Latest Update Is 1.3.3",
-            Content = "Please join our discord https://discord.gg/fZDNu9uQCz. Updated as of 5/11/24.",
+            Name = "Latest Update Is 1.3.5",
+            Content = "Updated as of 15/11/24.",
             Image = "rbxassetid://4483345998",
             Time = 10
         })
   	end    
 })
 
+MainTab:AddButton({
+    Name = "Force Close Game",
+	Callback = function()
+        game.Players.LocalPlayer:Kick("You have been banned for using advantages In-Game that will affect other players (Cheating, Exploiting etc.). If you think this is a mistake, please head over to the support channel on our discord.")
+  	end    
+})
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -376,7 +371,7 @@ HubTab:AddButton({
 
 
 HubTab:AddButton({
-	Name = "Infinite Fun ;3",
+	Name = "NukeVsCity - Script Hub",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
     end    
@@ -462,12 +457,6 @@ Creamium:AddButton({
     end    
 })
 
-Creamium:AddButton({
-	Name = "Fake Ban",
-	Callback = function()
-		loadstring(game:HttpGet("https://zxfolix.github.io/fakeban.lua"))()
-    end    
-})
 
 
 Creamium:AddButton({
@@ -559,6 +548,87 @@ Creamium:AddButton({
 	end
 		})
 
+
+		Creamium:AddButton({
+			Name = "E to Dash",
+			Callback = function()
+				-- Define variables and constants
+local players = game:GetService("Players")
+local userInputService = game:GetService("UserInputService")
+local runService = game:GetService("RunService")
+local localPlayer = players.LocalPlayer
+local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local humanoid = character:WaitForChild("Humanoid")
+local dashEnabled = true
+local dashCooldown = 1.5 -- Cooldown time in seconds
+local dashDistance = 50 -- The distance to dash
+
+-- Function to perform the dash
+local function performDash()
+if dashEnabled then
+dashEnabled = false
+
+local startTime = tick()
+local dashTime = 0.2 -- The duration of the dash
+local startPos = humanoidRootPart.Position
+local dashDirection = humanoidRootPart.CFrame.LookVector * dashDistance
+local targetPos = startPos + dashDirection
+
+-- Dashing loop
+runService.Heartbeat:Connect(function()
+local elapsedTime = tick() - startTime
+if elapsedTime < dashTime then
+local alpha = elapsedTime / dashTime
+local newPos = startPos:lerp(targetPos, alpha)
+humanoidRootPart.CFrame = CFrame.new(newPos)
+else
+return
+end
+end)
+
+-- Sound effect
+local dashSound = Instance.new("Sound", humanoidRootPart)
+dashSound.SoundId = "rbxassetid://3748780065" -- Replace with a valid sound ID
+dashSound:Play()
+
+-- Wait for the dash to complete and cooldown
+wait(dashTime + dashCooldown)
+dashEnabled = true
+end
+end
+
+-- Connect key press event
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+if input.KeyCode == Enum.KeyCode.E and not gameProcessed then
+performDash()
+end
+end)
+
+			end    
+		})
+
+
+Creamium:AddButton({
+	Name = "Fake kick",
+		Callback = function()
+			OrionLib:MakeNotification({
+				Name = "Executed",
+				Content = "Can trigger spam filter, rejoin to turn off.",
+				Image = "rbxassetid://4483345998",
+				Time = 5	
+			})		
+			local Players = game:GetService("Players")
+Players.PlayerRemoving:Connect(function(player)
+    local chatMessage = ";kick " .. player.Name
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(chatMessage, "All")
+end)
+	end    
+})
+
+		
+
+
 -- KEYBIND --
 
 Tab:AddBind({
@@ -584,6 +654,12 @@ print(OrionLib.Flags["toggle"].Value) -- prints the value of the toggle.
 OrionLib:Init()
 
 
+Creamium:AddToggle({
+    Name = "Toggle",
+    Default = true,
+    Save = true,
+    Flag = "toggle"
+})
 
 
 
